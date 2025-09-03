@@ -1,6 +1,10 @@
 # Frontend - Sistema de Gerenciamento de Livros
 
-Este é o frontend do sistema de gerenciamento de livros, construído com React, TypeScript, Tailwind CSS e Shadcn/ui.
+Este é o frontend do sistema de gerenciamento de livros, construído com React, TypeScript e CSS.
+
+### Criado em 03/09/2025
+### Por José Mauro da Silva
+
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -116,45 +120,6 @@ interface Genre {
   name: string;
   description: string;
 }
-```
-
-## 🏗️ Arquitetura
-
-### Estrutura de Pastas
-```
-src/
-├── components/          # Componentes reutilizáveis
-│   ├── ui/            # Componentes base do Shadcn/ui
-│   ├── Layout.tsx     # Layout principal da aplicação
-│   └── Sidebar.tsx    # Barra lateral de navegação
-├── hooks/              # Hooks personalizados
-│   └── use-api.ts     # Hooks para gerenciar chamadas da API
-├── pages/              # Páginas da aplicação
-│   ├── Books.tsx      # Listagem e gerenciamento de livros
-│   ├── Authors.tsx    # Listagem e gerenciamento de autores
-│   ├── Genres.tsx     # Listagem e gerenciamento de gêneros
-│   └── Home.tsx       # Página inicial
-├── services/           # Serviços
-│   └── api.ts         # Serviço principal da API
-├── types/              # Definições de tipos TypeScript
-│   └── index.ts       # Tipos principais da aplicação
-└── lib/                # Utilitários e configurações
-```
-
-### Gerenciamento de Estado
-
-A aplicação utiliza **React Query (TanStack Query)** para:
-- Cache de dados da API
-- Gerenciamento de estado de loading e erro
-- Invalidação automática de cache
-- Sincronização de dados entre componentes
-
-### Tratamento de Erros
-
-- Validação de respostas HTTP
-- Mensagens de erro amigáveis
-- Toast notifications para feedback do usuário
-- Estados de loading e erro em todas as operações
 
 ## 🚀 Scripts Disponíveis
 
@@ -164,21 +129,6 @@ A aplicação utiliza **React Query (TanStack Query)** para:
 - `npm run preview` - Visualiza o build de produção
 - `npm run lint` - Executa o linter
 
-## 🔒 Configuração de Segurança
-
-- CORS configurado no backend
-- Validação de dados com Zod
-- Sanitização de inputs
-- Tratamento seguro de erros
-
-## 📱 Responsividade
-
-A aplicação é totalmente responsiva e funciona em:
-- Desktop (1024px+)
-- Tablet (768px - 1023px)
-- Mobile (< 768px)
-
-## 🧪 Testes
 
 Para executar os testes:
 ```bash
@@ -192,36 +142,3 @@ npm run build
 ```
 
 O build será gerado na pasta `dist/` e pode ser servido por qualquer servidor web estático.
-
-## 🤝 Contribuição
-
-1. Faça um fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
-
-## 🆘 Suporte
-
-Se você encontrar algum problema ou tiver dúvidas:
-
-1. Verifique se o backend está rodando
-2. Confirme se a URL da API está correta no `.env.local`
-3. Verifique o console do navegador para erros
-4. Abra uma issue no repositório
-
-## 🔄 Atualizações
-
-Para manter o projeto atualizado:
-
-```bash
-npm update
-# ou
-yarn upgrade
-# ou
-bun update
-```
