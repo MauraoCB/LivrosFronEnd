@@ -135,7 +135,7 @@ export const useDeleteAuthor = () => {
 export const useGenres = () => {
   return useQuery({
     queryKey: ['genres'],
-    queryFn: apiService.getGenres,
+    queryFn: () => apiService.getGenres(),
     staleTime: 5 * 60 * 1000,
   });
 };
