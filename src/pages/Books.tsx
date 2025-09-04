@@ -279,12 +279,12 @@ export default function Books() {
                 <Input
                   id="publicationYear"
                   type="number"
-                  min="1000"
-                  max="2100"
+                
                   value={newBook.publicationYear}
                   onChange={(e) => {
                     const value = e.target.value;
-                    if (value === '' || (/^\d{4}$/.test(value) && parseInt(value) >= 1000 && parseInt(value) <= 2100)) {
+                    // Permite digitação livre, mas valida apenas quando completo
+                    if (value === '' || (/^\d+$/.test(value) && parseInt(value) >= 1 && parseInt(value) <= 22100)) {
                       setNewBook({ ...newBook, publicationYear: value });
                     }
                   }}
@@ -518,12 +518,12 @@ export default function Books() {
             <Input
               id="edit-publicationYear"
               type="number"
-              min="1000"
-              max="2100"
+              
               value={editingBook?.publicationYear || ""}
               onChange={(e) => {
                 const value = e.target.value;
-                if (value === '' || (/^\d{4}$/.test(value) && parseInt(value) >= 1000 && parseInt(value) <= 2100)) {
+                // Permite digitação livre, mas valida apenas quando completo
+                if (value === '' || (/^\d+$/.test(value) && parseInt(value) >= 1 && parseInt(value) <= 22100)) {
                   setEditingBook(editingBook ? { ...editingBook, publicationYear: parseInt(value) || undefined } : null);
                 }
               }}
