@@ -22,7 +22,7 @@ Este é o frontend do sistema de gerenciamento de livros, construído com React,
 
 - Node.js 18+ 
 - npm, yarn ou bun
-- Backend .NET rodando na porta 7001 (HTTPS)
+- Backend .NET rodando na porta 5070 (HTTPS)
 
 ## 🛠️ Instalação
 
@@ -44,7 +44,7 @@ Este é o frontend do sistema de gerenciamento de livros, construído com React,
    
    Crie um arquivo `.env.local` na raiz do projeto:
    ```env
-   VITE_API_BASE_URL=https://localhost:7001/api/v1
+   VITE_API_BASE_URL=https://localhost:5070/api/v1
    ```
 
    **Importante:** Certifique-se de que o backend esteja rodando na porta 7001 com HTTPS.
@@ -60,7 +60,7 @@ Este é o frontend do sistema de gerenciamento de livros, construído com React,
 
 5. **Acesse a aplicação:**
    ```
-   http://localhost:5173
+   http://localhost:8080
    ```
 
 ## 🔧 Configuração da API
